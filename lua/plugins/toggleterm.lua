@@ -8,7 +8,7 @@ return {
     config = function()
       require("toggleterm").setup({
         size = 20,  -- Altura de la terminal cuando está horizontal
-        open_mapping = [[<C-j>]],  -- Tecla para alternar la terminal
+        open_mapping = [[<C-t>]],  -- Tecla para alternar la terminal
         hide_numbers = true,  -- Oculta los números de línea en la terminal
         shade_filetypes = {},  -- Archivos de tipo a oscurecer
         shade_terminals = true,  -- Oscurecer las terminales
@@ -27,12 +27,8 @@ return {
           },
         },
         on_open = function(term)
-          vim.cmd("startinsert!")  -- Asegúrate de estar en modo inserción al abrir
-          -- Cambiar solo el color de fondo de la terminal
-          vim.api.nvim_set_hl(0, "Normal", { bg = "#2E1A47", fg = "#EAD1E3" })  -- Fondo morado suave y texto claro
-          vim.api.nvim_set_hl(0, "TermNormal", { bg = "#2E1A47", fg = "#EAD1E3" })  -- Para el texto en la terminal
-          vim.api.nvim_set_hl(0, "TermCursor", { bg = "#BB86FC", fg = "#2E1A47" })  -- Color del cursor
-        end,
+           vim.cmd("startinsert!")  -- Asegúrate de estar en modo inserción al abrir
+      end,
       })
     end,
   }
