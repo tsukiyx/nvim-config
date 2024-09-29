@@ -20,7 +20,6 @@ vim.keymap.set('n', '<leader>l', '<C-w>l', { desc = 'Move right to split' }) -- 
 -- Guardar y salir
 -- Guardar archivo en modo normal como si fuera :w
 vim.keymap.set('n', '<C-s>', ':w<CR>', { desc = 'Save file' }) 
-vim.keymap.set('n', '<C-q>', ':q<CR>', { desc = 'Quit' })               -- Salir de Neovim
 vim.keymap.set('n', '<C-wq>', ':wq<CR>', { desc = 'Save and quit' })   -- Guardar y salir
 
 -- Navegación entre buffers
@@ -51,5 +50,4 @@ vim.keymap.set('v', '<A-j>', ":m '>+1<CR>gv=gv", { noremap = true, silent = true
 -- Mover líneas hacia arriba
 vim.keymap.set('v', '<A-k>', ":m '<-2<CR>gv=gv", { noremap = true, silent = true })
 
-vim.keymap.set('n', '<leader>d', 'yyp', { noremap = true, silent = true })
- 
+vim.keymap.set('n', '<leader>d', 'yyp', { noremap = true, silent = true }) 
