@@ -6,7 +6,6 @@ return{
       "rafamadriz/friendly-snippets"
     }
   },
-  
   {
   'hrsh7th/nvim-cmp',
   config = function()
